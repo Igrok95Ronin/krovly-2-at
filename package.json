@@ -1,7 +1,6 @@
 {
   "name": "blinds-1",
   "version": "1.0.0",
-  "description": "",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,5 +22,14 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
     "sass": "^1.53.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Igrok95Ronin/krovly-2-at.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Igrok95Ronin/krovly-2-at/issues"
+  },
+  "homepage": "https://github.com/Igrok95Ronin/krovly-2-at#readme",
+  "description": ""
 }

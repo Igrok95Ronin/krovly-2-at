@@ -19,7 +19,7 @@ function styles() {/* работа со стилями */
         overrideBrowserslist: ['last 10 version'],/* префиксы для старых версий последние 10 версий браузеров */
         grid: true
     }))
-    .pipe(cleanCss({compatibility: 'ie8'}))/* минификация css */
+    // .pipe(cleanCss({compatibility: 'ie8'}))/* минификация css */
     .pipe(concat('style.min.css'))/* меняем название на указанное */
     .pipe(sourcemaps.write())/* конец карты */
     .pipe(browserSync.stream())/* обновление бравзера */
