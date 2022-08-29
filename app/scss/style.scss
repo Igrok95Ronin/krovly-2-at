@@ -226,3 +226,50 @@ body{
     object-fit: cover;
     box-shadow: 75px 75px 0px -50px #ffdc39;
 }
+//difference
+.difference {
+    background-image: url(../../assets/img/four-gabled-rooflines.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 60px 0;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: #fff;
+        opacity: .94;
+        width: 100%;
+        height: 100%;
+
+    }
+}
+.difference__box {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    padding: 50px 0;
+}
+.difference__left {
+    max-width: 520px;
+}
+.difference__title {
+    font-size: 48px;
+    color: #232323;
+    font-weight: 700;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: $prymaryColor;
+        height: 3px;
+        width: 200px;
+        bottom: -20px;
+    }
+}
+.difference__right {
+}
+.difference__dscr {
+    line-height: 25px;
+}
