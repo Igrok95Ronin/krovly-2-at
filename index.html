@@ -19,7 +19,9 @@ $title = $text . ' ' . $city;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <?= $site_data['html'] ?>
-    <title><?= $title ?></title>
+    <title>
+        <?= $title ?>
+    </title>
 </head>
 
 <body>
@@ -48,6 +50,63 @@ $title = $text . ' ' . $city;
                                 <h1 class="quality-roofs__title">Wir bauen Qualitätsdächer</h1>
                                 <p class="quality-roofs__dscr">Machen Sie Ihr Dach professionell</p>
                                 <a href="#" class="quality-roofs__btn"><span>111222333</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="forms">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 container">
+                        <div class="forms__inner">
+                            <div class="forms__left">
+                                <div class="forms__img-tel"></div>
+                                <p class="forms__mini-dscr">Notfallunterstützung</p>
+                                <a href="" class="forms__number">111222333</a>
+                            </div>
+                            <div class="forms__right">
+                                <h2 class="forms__title">Kostenloser Arbeitvoranschlag, unverbindlich</h2>
+                                <p class="forms__dscr">Bitte füllen Sie das Formular aus</p>
+
+                                <form id="jq_form" class="mt-1">
+                                    <div class="my-3">
+                                        <input class="form-control" placeholder="Vorname" name="jq_name" type="text">
+                                        <div id="jq_name"
+                                            style="font-weight:700;font-size:15px;color:red;padding-top:2px;display:none">
+                                            Dies ist ein Pflichtfeld.</div>
+                                    </div>
+                                    <div class="my-3">
+                                        <input class="form-control test" placeholder="Telefon" name="jq_phone"
+                                            type="text">
+                                        <input class="form-control test" placeholder="Straße" name="jq_street"
+                                            type="text">
+                                        <div id="jq_phone"
+                                            style="font-weight:700;font-size:15px;color:red;padding-top:2px;display:none">
+                                            Dies ist ein Pflichtfeld.</div>
+                                    </div>
+                                    <div class="my-3">
+                                        <input class="form-control test" placeholder="PLZ / Ort" name="jq_city"
+                                            type="text">
+                                        <input class="form-control test" placeholder="E-Mail" name="jq_email"
+                                            type="text">
+                                    </div>
+
+                                    <div class="my-3">
+                                        <textarea rows="3" class="form-control textarea-height" name="jq_text"
+                                            placeholder="Nachricht"></textarea>
+                                        <div id="jq_text"
+                                            style="font-weight:700;font-size:15px;color:red;padding-top:2px;display:none">
+                                            Dies ist ein Pflichtfeld.</div>
+                                    </div>
+                                    <div class="form__btn">
+                                        <input class="btn  text-uppercase fw-bold mb-0 px-3 py-2 forms__button"
+                                            type="submit" id="jq_submit" value="Senden">
+                                    </div>
+                                    <div id="jq_success" style="display:none">Vielen Dank für deine Nachricht. Sie wurde
+                                        gesendet.</div>
+                                </form>
                             </div>
                         </div>
                     </div>

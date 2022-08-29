@@ -109,3 +109,73 @@ body{
 .quality-roofs__btn {
     @include btn();
 }
+//Forms
+.forms {
+}
+
+.forms__inner {
+    display: grid;
+    grid-template-columns: .53fr 1fr;
+    margin-top: -9em;
+    position: relative;
+}
+.forms__left {
+    background-color: #5d5d5d;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.forms__img-tel {
+    width: 70px;
+    height: 70px;
+    background: url(../../assets/img/tel-big.svg);
+    margin-bottom: 20px;
+}
+
+.forms__mini-dscr {
+    font-size: 15px;
+    color: #f5f5f5;
+    margin-bottom: 20px;
+}
+.forms__number {
+    font-size: 30px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 2px;
+    &:hover {
+        color: #fff;
+    }
+}
+.forms__right {
+    background-color: #f5f5f5;
+    padding: 48px;
+    color: #232323;
+}
+.forms__title {
+    font-size: 29px;
+    font-weight: 600;
+}
+.forms__dscr {
+    font-weight: 500;
+}
+.test {
+    display: inline !important;
+    width: 49% !important;
+}
+.form-control {
+    width: 99%;
+}
+.form__btn {
+    display: flex;
+    justify-content: end;
+    margin-right: 9px;
+}
+.forms__button {
+    background-color: $prymaryColor;
+    transition: all .3s ease-in-out;
+    &:hover {
+        background-color: #f2c80d;
+    }
+}
