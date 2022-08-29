@@ -73,3 +73,39 @@ body{
 .btN {
     @include btn();
 }
+//quality-roofs
+.quality-roofs {
+    background: url(../../assets/img/laying-roof-tiles.jpg)no-repeat;
+    background-size: cover;
+    background-position: 100% 8%;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: $prymaryTitleColor;
+        width: 100%;
+        height: 100%;
+        opacity: .4;
+    }
+}
+.quality-roofs__box {
+    padding: 256px 0 224px;
+    position: relative;
+    color: #fff;
+    text-align: center;
+}
+.quality-roofs__inner {
+    width: 700px;
+    margin: 0 auto;
+}
+.quality-roofs__title {
+    font-size: 72px;
+    font-weight: 700;
+
+}
+.quality-roofs__dscr {
+    font-size: 48px;
+}
+.quality-roofs__btn {
+    @include btn();
+}
