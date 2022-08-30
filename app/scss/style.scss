@@ -295,3 +295,34 @@ body{
 .services__dscr {
     line-height: 25px;
 }
+//quality
+.quality {
+    margin-top: 50px;
+}
+.quality__title {
+    font-size: 45px;
+    font-weight: 700;
+    padding-left: 30px;
+    color: #232323;
+}
+.quality__dscr {
+    padding-left: 30px;
+    margin-bottom: 50px;
+}
+.quality__box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.quality__img,
+.quality__img2 {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.quality__img {
+    box-shadow: -75px 75px 0px -50px #ffdc39;
+}
+.quality__img2 {
+    box-shadow: 75px -75px 0px -50px #ffdc39;
+}
