@@ -431,3 +431,26 @@ body{
     max-height: 50px;
     margin-bottom: 30px;
 }
+//safety
+.safety {
+}
+.safety__box {
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    gap: 100px;
+}
+.safety__left {
+    text-align: right;
+    padding: 64px;
+}
+.safety__img {
+    max-width: 78px;
+}
+.safety__title {
+    @include title();
+}
+.safety__big-img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+}
