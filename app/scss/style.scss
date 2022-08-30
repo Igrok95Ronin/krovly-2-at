@@ -326,3 +326,28 @@ body{
 .quality__img2 {
     box-shadow: 75px -75px 0px -50px #ffdc39;
 }
+//quality-first-job
+.quality-first-job {
+    margin-top: 100px;
+    background-image: url(../../assets/img/joyous-construction-site-worker-with-hammer-building-a-roof-carcass.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0.4;
+    }
+}
+.quality-first-job__title {
+    position: relative;
+    font-size: 48px;
+    font-weight: 800;
+    text-align: center;
+    color: #fff;
+    padding: 150px 0;
+}
