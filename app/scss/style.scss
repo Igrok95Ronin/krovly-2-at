@@ -31,6 +31,11 @@ $prymaryTitleColor: #232323;
         }
     }
 }
+@mixin title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #232323;
+}
 
 *{
     box-sizing: border-box;
@@ -201,9 +206,7 @@ body{
     width: 50%;
 }
 .about__title {
-    font-size: 48px;
-    font-weight: 700;
-    color: #232323;
+    @include title();
 }
 .about__text {
     line-height: 25px;
@@ -255,9 +258,7 @@ body{
     max-width: 520px;
 }
 .difference__title {
-    font-size: 48px;
-    color: #232323;
-    font-weight: 700;
+    @include title();
     position: relative;
     &::before {
         content: '';
@@ -285,6 +286,7 @@ body{
     width: 100%;
     max-height: 260px;
     object-fit: cover;
+    margin-bottom: 20px;
 }
 .services__name {
     font-size: 28px;
@@ -294,16 +296,15 @@ body{
 }
 .services__dscr {
     line-height: 25px;
+    padding-left:16px;
 }
 //quality
 .quality {
     margin-top: 50px;
 }
 .quality__title {
-    font-size: 45px;
-    font-weight: 700;
+    @include title();
     padding-left: 30px;
-    color: #232323;
 }
 .quality__dscr {
     padding-left: 30px;
@@ -344,9 +345,9 @@ body{
     }
 }
 .quality-first-job__title {
-    position: relative;
-    font-size: 48px;
+    @include title();
     font-weight: 800;
+    position: relative;
     text-align: center;
     color: #fff;
     padding: 150px 0;
@@ -370,9 +371,7 @@ body{
     box-shadow: -75px 75px 0px -50px #ffdc39;
 }
 .roofing-professionals__title {
-    font-size: 48px;
-    font-weight: 800;
-    color: #232323;
+    @include title();
 }
 .roofing-professionals__dscr {
     line-height: 25px;
@@ -381,4 +380,54 @@ body{
 .roofing-professionals__btn {
     @include btn();
     margin-top: 50px;
+}
+//best-solutions
+.best-solutions {
+    margin-top: 100px;
+    background-image: url(../../assets/img/a-roofer-replacing-the-tiles-on-a-house-roof-.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        opacity: .96;
+    }
+}
+.best-solutions__title {
+    @include title();
+    text-align: center;
+    position: relative;
+    margin-top: 70px;
+}
+.best-solutions__box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 150px 0;
+    gap: 0;
+    position: relative;
+}
+.best-solutions__inner {
+    text-align: center;
+    padding: 0 48px;
+    line-height: 25px;
+}
+.best-solutions__inner:nth-child(2) {
+    text-align: center;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+}
+.best-solutions__name {
+    font-size: 24px;
+    color: #232323;
+    font-weight: 600;
+}
+.best-solutions__img {
+    max-width: 50px;
+    max-height: 50px;
+    margin-bottom: 30px;
 }
