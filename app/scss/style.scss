@@ -32,9 +32,10 @@ $prymaryTitleColor: #232323;
     }
 }
 @mixin title {
-    font-size: 48px;
+    font-size: clamp(28px,4vw,48px);
     font-weight: 700;
     color: #232323;
+    margin-bottom: 20px;
 }
 
 *{
@@ -56,7 +57,6 @@ li{
 }
 
 body{
-    outline: 1px solid red;
     margin: auto;
     padding: 0;
     font: 16px Helvetica,Arial,sans-serif;
@@ -104,12 +104,12 @@ body{
     margin: 0 auto;
 }
 .quality-roofs__title {
-    font-size: 72px;
+    font-size: clamp(30px,4vw,72px);
     font-weight: 700;
 
 }
 .quality-roofs__dscr {
-    font-size: 48px;
+    font-size: clamp(30px,4vw,48px);
 }
 .quality-roofs__btn {
     @include btn();
@@ -408,7 +408,6 @@ body{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 150px 0;
-    gap: 0;
     position: relative;
 }
 .best-solutions__inner {
@@ -462,4 +461,165 @@ body{
     line-height: 50px;
     padding-left: 50px;
     margin-top: 80px;
+}
+//Media
+@media(max-width: 424px) {
+    .header {
+        display: none;
+    }
+}
+@media(max-width: 499px) {
+    .quality-roofs__box {
+        padding: 50px 0 260px;
+    }
+    .forms__right {
+        padding: 20px 5px;
+    }
+    .forms__title {
+        font-size: 18px !important;
+    }
+    .forms__number {
+        font-size: 20px;
+    }
+    .forms__img-tel {
+        width: 45px;
+        height: 45px;
+    }
+    .test {
+        display: block !important;
+        width: 100% !important;
+        margin-bottom: 15px;
+    }
+    .form-control {
+        width: 100%;
+    }
+}
+@media(max-width: 767px) {
+    .quality-roofs__inner {
+        width: 100%;
+    }
+    .forms__inner {
+        grid-template-columns: 1fr;
+    }
+    .about__box {
+        flex-wrap: wrap;
+    }
+    .about {
+        padding: 3em 0em 2em 0em;
+    }
+    .about__min-img {
+        display: none;
+    }
+    .about__img {
+        height: 300px;
+    }
+    .difference__box {
+        grid-template-columns: 1fr;
+    }
+    .quality__box {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .quality__dscr {
+        padding-left: 0;
+    }
+    .quality__title {
+        padding-left: 0;
+    }
+    .quality-first-job {
+        margin-top: 50px;
+    }
+    .quality-first-job__title {
+        padding: 120px 0;
+    }
+    .roofing-professionals__box {
+        grid-template-columns: 1fr;
+    }
+    .roofing-professionals__left {
+        height: 400px !important;
+    }
+    .roofing-professionals {
+        margin-top: 50px;
+    }
+    .best-solutions__box {
+        grid-template-columns: 1fr;
+        padding: 20px 0;
+    }
+    .best-solutions__inner:nth-child(2) {
+        border-left:none;
+        border-right: none;
+
+    }
+    .best-solutions__inner:nth-child(2) {
+        border-top: 1px solid #e5e5e5;
+        border-bottom: 1px solid #e5e5e5;
+        padding: 40px 0;
+        margin: 40px 0;
+    }
+    .best-solutions__inner {
+        padding: 0;
+    }
+    .best-solutions__title {
+        margin-top: 20px;
+    }
+    .safety__box {
+        grid-template-columns: 1fr;
+    }
+    .safety__left {
+        text-align: center !important;
+    }
+    .safety__img {
+        margin-bottom: 40px;
+    }
+    .safety__big-img {
+        height: 350px;
+    }
+    .safety__left {
+        padding: 64px 12px 20px !important;
+    }
+    .footer {
+        margin-top: 20px;
+    }
+    .padding-none {
+        padding: 0px;
+    }
+    .best-solutions {
+        margin-top: 50px;
+    }
+    
+}
+@media(max-width: 899px) {
+    .forms__title {
+        font-size: 25px;
+    }
+    .about__left,
+    .about__right {
+        width: 100%;
+    }
+
+}
+@media(max-width: 999px) {
+    .roofing-professionals__left {
+        height: 450px;
+    }
+}
+@media(max-width: 1199px) {
+    .services__box {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .services__inner {
+        max-width: 100%;
+    }
+}
+@media(max-width: 1300px) {
+    .safety__box {
+        gap: 20px;
+    }
+}
+@media(max-width: 1749px) {
+    .safety__left {
+        text-align: right;
+        padding: 64px 0;
+    }
 }

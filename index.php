@@ -1,17 +1,17 @@
 <?php
-$site_data      = json_decode(file_get_contents('http://templates.jquery.link/api/' . $_SERVER['HTTP_HOST']), true);
+$site_data      = json_decode(file_get_contents('http://local.jquery.link/api/' . $_SERVER['HTTP_HOST']), true);
 
 $phone_name     = $site_data['phone_name'];
 $phone_href     = $site_data['phone_href'];
 
-$text           = str_replace('+', ' ', trim($_GET['t'] ?? 'Entrumpelung'));
-$city           = str_replace('+', ' ', trim($_GET['n'] ?? 'in der nahe'));
+$text           = str_replace('+', ' ', trim($_GET['t'] ?? 'Wir bauen Qualitätsdächer'));
+$city           = str_replace('+', ' ', trim($_GET['n'] ?? ''));
 
 $title = $text . ' ' . $city;
 ?>
 
 <!DOCTYPE html>
-<html lang="de">
+<html lang="at">
 
 <head>
     <meta charset="UTF-8">
@@ -34,22 +34,22 @@ $title = $text . ' ' . $city;
                 <div class="col-12 container">
                     <div class="header__box">
                         <img src="./assets/img/logo-pompiliu-galben-final.png" alt="" class="header__logo">
-                        <a href="#" class="btN"><span>111222333</span></a>
+                        <a class="btN" href="<?= $phone_href ?>" ><span><?= $phone_name ?></span></a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <main class="main">
+  <main class="main">
         <section class="quality-roofs">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 container">
                         <div class="quality-roofs__box">
                             <div class="quality-roofs__inner">
-                                <h1 class="quality-roofs__title">Wir bauen Qualitätsdächer</h1>
+                                <h1 class="quality-roofs__title"><?= $title ?></h1>
                                 <p class="quality-roofs__dscr">Machen Sie Ihr Dach professionell</p>
-                                <a href="#" class="quality-roofs__btn"><span>111222333</span></a>
+                                <a class="quality-roofs__btn" href="<?= $phone_href ?>" ><span><?= $phone_name ?></span></a>
                             </div>
                         </div>
                     </div>
@@ -64,7 +64,7 @@ $title = $text . ' ' . $city;
                             <div class="forms__left">
                                 <div class="forms__img-tel"></div>
                                 <p class="forms__mini-dscr">Notfallunterstützung</p>
-                                <a href="" class="forms__number">111222333</a>
+                                <a class="forms__number" href="<?= $phone_href ?>" ><?= $phone_name ?></a>
                             </div>
                             <div class="forms__right">
                                 <h2 class="forms__title">Kostenloser Arbeitvoranschlag, unverbindlich</h2>
@@ -127,7 +127,7 @@ $title = $text . ' ' . $city;
                                 benutzen wir nur Materialien von Spitzenqualität, in Übereinstimmung mit den
                                 Voraussetzungen des Kundes, um die besten Arbeiten mit langen Gewährleistungfristen
                                 anzubieten.</p>
-                            <a href="#" class="about__btn"><span>111222333</span></a>
+                            <a class="about__btn" href="<?= $phone_href ?>" ><span><?= $phone_name ?></span></a>
                             <img src="./assets/img/Denah.png" class="about__min-img"></img>
                         </div>
                         <div class="about__right">
@@ -146,7 +146,7 @@ $title = $text . ' ' . $city;
                             <p class="about__text">Es ist notwendig, das Dach regelmäßig zu inspizieren, um Probleme rechtzeitig zu erkennen, damit sie nicht schwerwiegend werden und ihre Reparatur nicht kostspielig sein wird.
 
                                 Auf diese Weise haben Sie das Dach für jede Jahreszeit bereit.</p>
-                            <a href="#" class="about__btn"><span>111222333</span></a>
+                            <a class="about__btn" href="<?= $phone_href ?>" ><span><?= $phone_name ?></span></a>
                             <img src="./assets/img/Denah.png" class="about__min-img"></img>
                         </div>
                         <div class="about__right">
@@ -235,7 +235,7 @@ $title = $text . ' ' . $city;
                                 <h2 class="roofing-professionals__title">
                                     Machen Sie sich keine Sorgen mehr und wenden Sie sich an unser Team von Dachdeckerprofis</h2>
                                 <p class="roofing-professionals__dscr">Wenn Sie Qualitätsarbeit zu Mindestpreisen wünschen, die von einem Team erfahrener Handwerker hergestellt werden, kontaktieren Sie uns</p>
-                                <a href="#" class="roofing-professionals__btn"><span>111222333</span></a>
+                                <a class="roofing-professionals__btn" href="<?= $phone_href ?>" ><span><?= $phone_name ?></span></a>
                             </div>
                         </div>
                     </div>
@@ -268,10 +268,10 @@ $title = $text . ' ' . $city;
                 </div>
             </div>
         </section>
-        <section class="safety">
+       <section class="safety">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-12 padding-none">
                         <div class="safety__box">
                             <div class="safety__left">
                                 <img class="safety__img" src="./assets/img/hammer-solid.svg" alt="" >
@@ -279,7 +279,7 @@ $title = $text . ' ' . $city;
                                 <p class="safety__dscr">Entsprechend den Kundenanforderungen finden wir die optimalen Lösungen für ein sicheres und schönes Dach.</p>
                             </div>
                             <div class="safety__right">
-                                <img class="safety__big-img" src="./assets/img/ceramic-roof-tiles-cover.webp" alt="" >
+                                <img class="safety__big-img" src="./assets/img/ceramic-roof-tiles-cover.jpg" alt="" >
                             </div>
                         </div>
                     </div>
